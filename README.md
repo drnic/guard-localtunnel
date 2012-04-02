@@ -2,8 +2,6 @@
 
 Guard launches Local Tunnel on the port of the application's process (where also managed by Guard)
 
-* guard-puma - port 4000
-
 ## Installation
 
 Add this line to your application's Gemfile:
