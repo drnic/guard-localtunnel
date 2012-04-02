@@ -13,7 +13,7 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.name          = "guard-localtunnel"
   gem.require_paths = ["lib"]
-  gem.version       = Guard::LocalTunnel::VERSION
+  gem.version       = Guard::LocalTunnelVersion::VERSION
 
   gem.add_dependency              "guard", ">= 1.0.1"
   gem.add_dependency              "localtunnel"
