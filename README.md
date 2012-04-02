@@ -1,6 +1,8 @@
-# Guard::Localtunnel
+# Guard::LocalTunnel
 
-TODO: Write a gem description
+Guard launches Local Tunnel on the port of the application's process (where also managed by Guard)
+
+* guard-puma - port 4000
 
 ## Installation
 
@@ -18,12 +20,26 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+guard init puma or add the following manually to your Guardfile
+
+```ruby
+guard 'localtunnel', :port => 3000 do
+  watch('Gemfile.lock')
+  watch(%r{^config|lib/.*})
+end
+```
+
+## Options
+
+* `:port` is the port number to run on (default 3000; 4000 if guard-puma available)
+
 
 ## Contributing
 
 1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Added some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+1. Create your feature branch (`git checkout -b my-new-feature`)
+1. Leave the version alone!
+1. Add what you changed to CHANGES.md
+1. Commit your changes (`git commit -am 'Added some feature'`)
+1. Push to the branch (`git push origin my-new-feature`)
+1. Create new Pull Request
