@@ -1,5 +1,7 @@
 # Guard::LocalTunnel
 
+IN DEVELOPMENT - This project has been started; inspired by @jc00ke's guard-puma, though no finished yet.
+
 Guard launches Local Tunnel on the port of the application's process (where also managed by Guard)
 
 ## Installation
